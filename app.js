@@ -6,8 +6,26 @@
     alert("Welcome " + userName + " !")
 
     document.write("Welcome, " + "    " + userName)
+    coffee();
 
-    let coffeeChoice = prompt("Do you like coffee? Type yes or no");
+    
+
+    // Anatomy of a function
+    
+    // function declaration / function definition
+
+    // function functionName(parameters){code to execute goes here;}
+
+        // function addTwoNumbers(){
+        // let num1 = 5;
+        // let num2 = 10;
+        // console.log(num1 + num2);
+        // return num1 + num2;
+        // }
+    // addTwoNumbers();
+
+    function coffee(){
+        let coffeeChoice = prompt("Do you like coffee? Type yes or no");
     
     if (coffeeChoice == 'yes')
     {
@@ -16,4 +34,4 @@
     else
     {document.write("We will work on your beverage choices.")}  
 
-    
+    }
