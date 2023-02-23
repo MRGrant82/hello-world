@@ -1,60 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Family Pets</title>
-</head>
-<link rel="stylesheet" href="styles.css">
-<body>
-    <script src="app.js"></script> 
-   <header>
-    <h1>Our Team Pets</h1>
-    <nav>
-        <ul>
-            <li id="partner"><a href="https://kaedenoc.github.io/website1/">Link to Partner's Page</a></li>
-            <li id="portfolio"><a href="https://github.com/MRGrant82">Link to Michael Grant's Portfolio</a></li>
-            
-        </ul>
-    </nav>
-   </header>
-    <main>
-    <section>
-        <article>
-                <h3>Burger</h3>
-                <img id="burger" src="Images/burger.jpg" alt= "Picture of Burger"/>
-                <ul>
-                <li>Napper</li>
-                <li>Climber</li>
-                <li>Troublemaker</li>
-                </ul>
-        </article>        
-        <article>
-                <h3>Hugo</h3>
-                <img id="hugo" src="Images/hugo.jpg" alt= "Picture of Hugo"/>
-                <ul>
-                <li>Where's</li>
-                <li>My</li>
-                <li>Food</li>
-                </ul>
-        </article>       
-        <article>        
-                <h3>Pickles</h3>
-                <img id="pickles" src="Images/pickles.jpg" alt= "Picture of Pickles"/>
-                <ul>
-                <li>Little</li>
-                <li>Scaredy</li>
-                <li>Cat</li>
-                </ul>
-        </article>
-    </section>
-    </main>
-   
-   <footer>
+    <title>Hello World</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <p>Welcome to my website. Here are some fun things to do:</p>
+    <ol>
+      <li>Look at some cute animals:</li>
+      <ul>
+        <li><img src="images/burger.jpg" alt="Burger"></li>
+        <li><img src="images/hugo.jpg" alt="Hugo"></li>
+        <li><img src="images/pickles.jpg" alt="Pickles"></li>
+      </ul>
+      <li>Leave a comment:</li>
+      <form>
+        <label for="comment-input">Enter your comment:</label>
+        <br>
+        <input type="text" id="comment-input" name="comment">
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+    </ol>
+
+    <form onsubmit="showBoys(); return false;">
+      <label for="cats-input">How many cats do I have? (1-3)</label>
+      <br>
+      <input type="number" id="cats-input" name="cats" min="1" max="3">
+      <br>
+      <button type="submit">Show Boys</button>
+    </form>
+
+    <img id="boys-image" src="images/boys.jpg" alt="Boys">
+
     <script>
-        {document.write("Please visit again.")}
+      function showBoys() {
+        const catsInput = document.getElementById('cats-input');
+        const cats = parseInt(catsInput.value);
+
+        if (isNaN(cats) || cats < 1 || cats > 3) {
+          alert('Please enter a number between 1 and 3.');
+          return;
+        }
+
+        const boysImage = document.getElementById('boys-image');
+        boysImage.style.display = 'block';
+
+        for (let i = 0; i < cats; i++) {
+          const image = document.createElement('img');
+          image.src = 'images/boys.jpg';
+          image.alt = 'Boys';
+          document.body.appendChild(image);
+        }
+      }
     </script>
-   </footer> 
-</body>
+  </body>
 </html>

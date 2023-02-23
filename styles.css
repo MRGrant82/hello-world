@@ -1,80 +1,52 @@
-
 body {
-    background-color: fuchsia;
-}
-h1 {
-    padding: 25px;
-    color: blue;
-    width: 25%;
-    text-align: center; 
-}
-
-h3 {
-    width: 30%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
     text-align: center;
     margin-top: 20px;
-}
-
-nav ul{
-    border-radius: 25px;
-    background-color: white;
-    margin-left: 0px;
-    margin-right: 0px;
-   
-}
-
-nav li{
-    display: inline-block;
-    border-radius: 25px;
-    background-color: white; 
-}
-
-#partner{
-   float: left;
-   margin-left: 5%;
-}
-#portfolio{
-    float: right;
-    margin-right: 5%;
-}
-
-* {border: 2px solid black;} 
-
-section {
+  }
+  
+  p {
+    margin: 20px;
+  }
+  
+  ol {
+    margin: 20px;
+    padding-left: 40px;
+  }
+  
+  li {
+    margin-top: 10px;
+  }
+  
+  label {
+    display: block;
+    margin: 20px;
+  }
+  
+  input[type="number"] {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button[type="submit"] {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
     background-color: blue;
-}
-
-article{
+    color: white;
+    cursor: pointer;
+  }
+  
+  img {
     display: block;
-    
-}
-
-article img {
-    
-
-}
-
-article ul{
-    display: block;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-article li {
-    font-size: 20px;
-    font-weight: bold;
-}
-#burger {
-    width: 500px;
-    height: 500px;
-}
-    
-#hugo {
-    width: 500px;
-    height: 500px;
-}
-
-#pickles {
-    width: 500px;
-    height: 500px;
-}
+    margin: 20px auto;
+    max-width: 100%;
+  }
+  
