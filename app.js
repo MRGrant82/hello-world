@@ -1,14 +1,24 @@
 
-    let myName = "Michael";
-    alert("Welcome to my website!" + "  I am " + myName + ".");
+    // let myName = "Michael";
+    // alert("Welcome to my website!" + "  I am " + myName + ".");
     
-    let userName = prompt("Enter your name please");
-    alert("Welcome " + userName + " !")
+    // let userName = prompt("Enter your name please");
+    // alert("Welcome " + userName + " !")
 
-    document.write("Welcome, " + "    " + userName)
-    coffee();
+    // document.write("Welcome, " + "    " + userName)
+    // coffee();
 
+    // function coffee(){
+    //     let coffeeChoice = prompt("Do you like coffee? Type yes or no");
     
+    // if (coffeeChoice == 'yes')
+    // {
+    //     document.write("     Ahh!  You're also an enjoyer of the delicious black soup! I know this because you said " + coffeeChoice + ".")
+    // }
+    // else
+    // {document.write("We will work on your beverage choices.")}  
+
+    // }
 
     // Anatomy of a function
     
@@ -23,15 +33,31 @@
         // return num1 + num2;
         // }
     // addTwoNumbers();
-
-    function coffee(){
+    function welcomeMessage(name) {
+        alert("Welcome to my website! I am " + name + ".");
+    }
+    
+    function getUserInput() {
+        let userName = prompt("Enter your name please");
+        alert("Welcome " + userName + " !");
+        return userName;
+    }
+    
+    function printWelcomeMessage(userName) {
+        document.write("Welcome, " + userName);
+    }
+    
+    function askForCoffeePreference() {
         let coffeeChoice = prompt("Do you like coffee? Type yes or no");
     
-    if (coffeeChoice == 'yes')
-    {
-        document.write("     Ahh!  You're also an enjoyer of the delicious black soup! I know this because you said " + coffeeChoice + ".")
+        if (coffeeChoice == 'yes') {
+            document.write("Ahh! You're also an enjoyer of the delicious black soup! I know this because you said " + coffeeChoice + ".");
+        } else {
+            document.write("We will work on your beverage choices.");
+        }
     }
-    else
-    {document.write("We will work on your beverage choices.")}  
-
-    }
+    
+    welcomeMessage("Michael");
+    let userName = getUserInput();
+    printWelcomeMessage(userName);
+    askForCoffeePreference();
