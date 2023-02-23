@@ -3,13 +3,27 @@ body {
     background-color: fuchsia;
 }
 h1 {
-    padding: 20px;
+    padding: 25px;
     color: blue;
-    width: 100%;
+    width: 25%;
     text-align: center;
+    
+   
+}
+
+nav ul{
+    border-radius: 25px;
+    background-color: white;
+    display: inline-block;
+    text-align: justify;
+    
+    
 }
 
 nav li{
+    display: inline-block;
+    border-radius: 25px;
+    background-color: white;
     display: inline-block;
     
     
