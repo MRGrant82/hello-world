@@ -6,38 +6,67 @@ h1 {
     padding: 25px;
     color: blue;
     width: 25%;
+    text-align: center; 
+}
+
+h3 {
+    width: 30%;
     text-align: center;
-    
-   
+    margin-top: 20px;
 }
 
 nav ul{
     border-radius: 25px;
     background-color: white;
-    display: inline-block;
-    text-align: justify;
-    
-    
+    margin-left: 0px;
+    margin-right: 0px;
+   
 }
 
 nav li{
     display: inline-block;
     border-radius: 25px;
-    background-color: white;
-    display: inline-block;
-    
-    
+    background-color: white; 
 }
 
-* {border: 2px solid black;}
+#partner{
+   float: left;
+   margin-left: 5%;
+}
+#portfolio{
+    float: right;
+    margin-right: 5%;
+}
+
+* {border: 2px solid black;} 
 
 section {
     background-color: blue;
 }
 
+article{
+    display: block;
+    
+}
+
+article img {
+    
+
+}
+
+article ul{
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+article li {
+    font-size: 20px;
+    font-weight: bold;
+}
 #burger {
-    width: 250px;
-    height: 250px;
+    width: 500px;
+    height: 500px;
 }
     
 #hugo {
@@ -46,6 +75,6 @@ section {
 }
 
 #pickles {
-    width: 1000px;
-    height: 1000px;
+    width: 500px;
+    height: 500px;
 }
