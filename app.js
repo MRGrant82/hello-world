@@ -1,65 +1,37 @@
-
-    // let myName = "Michael";
-    // alert("Welcome to my website!" + "  I am " + myName + ".");
-    
-    // let userName = prompt("Enter your name please");
-    // alert("Welcome " + userName + " !")
-
-    // document.write("Welcome, " + "    " + userName)
-    // coffee();
-
-    // function coffee(){
-    //     let coffeeChoice = prompt("Do you like coffee? Type yes or no");
-    
-    // if (coffeeChoice == 'yes')
-    // {
-    //     document.write("     Ahh!  You're also an enjoyer of the delicious black soup! I know this because you said " + coffeeChoice + ".")
-    // }
-    // else
-    // {document.write("We will work on your beverage choices.")}  
-
-    // }
-
-    // Anatomy of a function
-    
-    // function declaration / function definition
-
-    // function functionName(parameters){code to execute goes here;}
-
-        // function addTwoNumbers(){
-        // let num1 = 5;
-        // let num2 = 10;
-        // console.log(num1 + num2);
-        // return num1 + num2;
-        // }
-    // addTwoNumbers();
-    function welcomeMessage(name) {
-        alert("Welcome to my website! I am " + name + ".");
+function welcomeMessage(name) {
+    alert("Welcome to my website! I am " + name + ".");
+  }
+  
+  function getUserInput() {
+    let userName = prompt("Enter your name please");
+    alert("Welcome " + userName + " !");
+    return userName;
+  }
+  
+  function printWelcomeMessage(userName) {
+    document.write("Welcome, " + userName);
+  }
+  
+  function askForCoffeePreference() {
+    let coffeeChoice = prompt("Do you like coffee? Type yes or no");
+  
+    if (coffeeChoice == 'yes') {
+      document.write("Ahh! You're also an enjoyer of the delicious black soup! I know this because you said " + coffeeChoice + ".");
+    } else {
+      document.write("We will work on your beverage choices.");
     }
-    
-    function getUserInput() {
-        let userName = prompt("Enter your name please");
-        alert("Welcome " + userName + " !");
-        return userName;
+  }
+  
+  function runWelcomeLoop() {
+    let name = "Michael";
+    let userName = "";
+    while (!userName) {
+      welcomeMessage(name);
+      userName = getUserInput();
     }
-    
-    function printWelcomeMessage(userName) {
-        document.write("Welcome, " + userName);
-    }
-    
-    function askForCoffeePreference() {
-        let coffeeChoice = prompt("Do you like coffee? Type yes or no");
-    
-        if (coffeeChoice == 'yes') {
-            document.write("Ahh! You're also an enjoyer of the delicious black soup! I know this because you said " + coffeeChoice + ".");
-        } else {
-            document.write("We will work on your beverage choices.");
-        }
-    }
-    
-    welcomeMessage("Michael");
-    let userName = getUserInput();
     printWelcomeMessage(userName);
     askForCoffeePreference();
-    
-      
+  }
+  
+  runWelcomeLoop();
+  

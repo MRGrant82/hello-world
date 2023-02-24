@@ -54,26 +54,42 @@
     </section>
 
     <script>
-      function showBoys() {
-        const catsInput = document.getElementById('cats-input');
-        const cats = parseInt(catsInput.value);
+      let userName = "";
 
-        if (isNaN(cats) || cats < 1 || cats > 3) {
-          alert('Please enter a number between 1 and 3.');
-          return;
+      function runWelcomeLoop() {
+        let name = "Michael";
+        while (!userName) {
+          welcomeMessage(name, userName);
+          userName = getUserInput();
         }
+        printWelcomeMessage(userName);
+        askForCoffeePreference();
+      }
+      </script>
+      function welcomeMessage(name, userName) {
+        alert("Welcome to my website, " + userName + "! I am " + name + ".");
+      }
 
-        const boysImage = document.getElementById('boys-image');
-        boysImage.style.display = 'block';
+      function getUserInput() {
+        let userName = prompt("Enter your name please");
+        alert("Welcome " + userName + " !");
+        return userName;
+      }
 
-        for (let i = 0; i < cats; i++) {
-          const image = document.createElement('img');
-          image.src = 'images/boys.jpg';
-          image.alt = 'Boys';
-          document.body.appendChild(image);
+      function printWelcomeMessage(userName) {
+        document.write("Welcome, " + userName);
+      }
+
+      function askForCoffeePreference() {
+        let coffeeChoice = prompt("Do you like coffee? Type yes or no");
+
+        if (coffeeChoice == 'yes') {
+          document.write("Ahh! You're also an enjoyer of the delicious black soup! I know this because you said " + coffeeChoice + ".");
+        } else {
+          document.write("We will work on your beverage choices.");
         }
       }
-    </script>
-    
-  </body>
-</html>
+
+      
+
+      
